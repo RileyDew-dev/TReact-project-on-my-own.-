@@ -699,16 +699,18 @@ PRICING ↓
   flex-direction: row;
   width: 100%;
   gap: 2rem;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 
 .plan {
   position: relative;
   margin-top: 4rem;
   display: flex;
-  flex: 1 1 0;
-  width: 100%;
+  flex: 1 1 calc(33.333% - 2rem);
   max-width: 24rem;
+  min-width: 280px;
   flex-direction: column;
   border: 1px solid rgb(226, 232, 240);
   border-radius: 0.75rem;
@@ -1070,27 +1072,8 @@ RESPONSIVE RULES
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .plans {
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
-    max-width: 380px;
-    margin: 32px auto 0;
-    
-  }
-
-  .plan {
-    width: 100%;
-    max-width: 380px;
-    margin: 0;
-  }
-
-
-
-
-  @media (max-width: 1024px) {
-   .plans {
     flex-direction: column;
     align-items: center;
   }
@@ -1166,7 +1149,23 @@ RESPONSIVE RULES
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
 
+@media (max-width: 768px) {
+  .plans {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 380px;
+    margin: 32px auto 0;
+  }
+
+  .plan {
+    width: 100%;
+    max-width: 380px;
+    margin: 0;
   }
 }
 
