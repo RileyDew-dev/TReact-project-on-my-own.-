@@ -696,22 +696,19 @@ PRICING ↓
 .plans {
   display: flex;
   position: relative;
+  flex-direction: row;
   width: 100%;
-  max-width: 1080px;
-  justify-content: space-between;
-  align-items: stretch;
   gap: 2rem;
-  margin: 48px auto 0;
+  justify-content: space-between;
 }
 
 .plan {
   position: relative;
-  margin-top: 0;
+  margin-top: 4rem;
   display: flex;
   flex: 1 1 0;
-  width: 22.5rem;
-  max-width: 22.5rem;
-  min-height: 31.25rem;
+  width: 100%;
+  max-width: 24rem;
   flex-direction: column;
   border: 1px solid rgb(226, 232, 240);
   border-radius: 0.75rem;
@@ -721,6 +718,7 @@ PRICING ↓
   padding-top: 0.5rem;
   text-align: center;
   color: rgb(26 32 44);
+  box-sizing: border-box;
   box-shadow:
     rgba(0, 0, 0, 0) 0px 0px 0px 0px,
     rgba(0, 0, 0, 0) 0px 0px 0px 0px,
@@ -832,7 +830,7 @@ PRICING ↓
     rgb(102, 126, 234) 100%
   );
   border: none;
-  margin-top: 0;
+  margin-top: 4rem;
 }
 
 .plan__target {
@@ -852,23 +850,25 @@ PRICING ↓
 }
 
 .plan__bottom {
- padding: 2rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding: 2rem;
 }
 
 .plan__button {
- border-radius: 0.25rem;
-    background-color: rgb(100 21 255);
-    padding: 0.75rem 2rem;
-    font-weight: 700;
-    color: rgb(247 250 252);
-    transition: all 300ms ease;
-    width: 100%;
-    border-radius: 9999px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+  border-radius: 0.25rem;
+  background-color: rgb(100 21 255);
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  color: rgb(247 250 252);
+  transition: all 300ms ease;
+  width: 100%;
+  border-radius: 9999px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .plan:nth-child(1) .plan__button {
@@ -1075,14 +1075,28 @@ RESPONSIVE RULES
     flex-direction: column;
     align-items: center;
     gap: 32px;
-    width: 100%;
-    max-width: 420px;
+    max-width: 380px;
+    margin: 32px auto 0;
+    
   }
 
   .plan {
-    max-width: 420px;
     width: 100%;
-    margin-top: 0;
+    max-width: 380px;
+    margin: 0;
+  }
+
+
+
+
+  @media (max-width: 1024px) {
+   .plans {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan {
+    margin-right: 0px;
   }
 
   .section__title {
@@ -1149,17 +1163,24 @@ RESPONSIVE RULES
   }
 
   #pricing .row {
-    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
 }
 
 @media (max-width: 640px) {
   .plans {
+    max-width: 100%;
     gap: 24px;
   }
 
   .plan {
+    width: 100%;
     max-width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   section {
