@@ -687,34 +687,33 @@ PRICING ↓
   position: relative;
   flex-direction: row;
   width: 100%;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: stretch;
+  justify-content: space-between;
 }
 
 .plan {
   position: relative;
   margin-top: 4rem;
   display: flex;
-  flex: 1 1 calc(33.333% - 2rem);
+  width: 100%;
   max-width: 24rem;
-  min-width: 280px;
   flex-direction: column;
-  border: 1px solid rgb(226, 232, 240);
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   background-color: rgb(255 255 255);
   padding-left: 2rem;
   padding-right: 2rem;
+  margin-right: 2rem;
   padding-top: 0.5rem;
   text-align: center;
   color: rgb(26 32 44);
-  box-sizing: border-box;
   box-shadow:
     rgba(0, 0, 0, 0) 0px 0px 0px 0px,
     rgba(0, 0, 0, 0) 0px 0px 0px 0px,
     rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.plan:nth-child(3) {
+  margin-right: 0px;
 }
 
 .plan:nth-child(1) .plan__stripe {
@@ -797,12 +796,12 @@ PRICING ↓
   flex-direction: column;
   border-top: 2px solid rgb(229, 231, 235);
   border-bottom: 2px solid rgb(229, 231, 235);
-  padding: 1.75rem 2rem;
+  padding: 2rem;
 }
 
 .plan:nth-child(2) .plan__middle {
-  border-top: 2px solid rgba(255, 255, 255, 0.15);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  border-top: 2px solid rgb(102, 126, 234);
+  border-bottom: 2px solid rgb(102, 126, 234);
 }
 
 .plan:nth-child(2) .plan__name,
@@ -814,14 +813,11 @@ PRICING ↓
 }
 
 .plan:nth-child(2) {
-  transform: translateY(0);
   background: linear-gradient(
     135deg,
     rgb(76, 81, 191) 0%,
     rgb(102, 126, 234) 100%
   );
-  border: none;
-  margin-top: 4rem;
 }
 
 .plan__target {
@@ -843,7 +839,7 @@ PRICING ↓
 .plan__bottom {
   margin-left: -2rem;
   margin-right: -2rem;
-  padding: 2rem;
+  padding: 2rem 4rem;
 }
 
 .plan__button {
@@ -1077,17 +1073,6 @@ RESPONSIVE RULES
 }
 
 @media (max-width: 768px) {
-  .plans {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .plan {
-    width: 100%;
-    max-width: 380px;
-    margin: 0;
-  }
-
   #quality .row,
   #values .row {
     flex-direction: column-reverse;
