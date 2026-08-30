@@ -698,19 +698,19 @@ PRICING ↓
   position: relative;
   flex-direction: row;
   width: 100%;
-  gap: 2rem;
+  gap: 3rem;
   justify-content: center;
-  flex-wrap: wrap;
-  align-items: stretch;
+  flex-wrap: nowrap;
+  align-items: flex-start;
 }
 
 .plan {
   position: relative;
   margin-top: 4rem;
   display: flex;
-  flex: 1 1 calc(33.333% - 2rem);
+  flex: 1 1 auto;
   max-width: 24rem;
-  min-width: 280px;
+  width: 100%;
   flex-direction: column;
   border: 1px solid rgb(226, 232, 240);
   border-radius: 0.75rem;
@@ -738,14 +738,6 @@ PRICING ↓
 
 .plan:nth-child(2) .plan__stripe {
   display: none;
-}
-
-.plan:nth-child(2) {
-  background: linear-gradient(
-    135deg,
-    rgb(76, 81, 191) 0%,
-    rgb(102, 126, 234) 100%
-  );
 }
 
 .plan:nth-child(3) .plan__stripe {
@@ -833,6 +825,7 @@ PRICING ↓
   );
   border: none;
   margin-top: 4rem;
+  margin-bottom: 0;
 }
 
 .plan__target {
