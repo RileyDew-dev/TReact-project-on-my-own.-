@@ -1161,7 +1161,14 @@ RESPONSIVE RULES
     font-size: 36px;
   }
 
+  .plan__middle {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
+
   .plan__bottom {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
     padding: 2rem 1rem;
   }
 
